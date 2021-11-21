@@ -2,8 +2,6 @@ import java.util.Scanner;
 
 import service.Frete;
 import service.TipoFrete;
-import service.frete.Normal;
-import service.frete.Sedex;
 
 public class App {
     public static void main(String... args) throws Exception {
@@ -17,13 +15,7 @@ public class App {
             int opcaoFrete = in.nextInt();
             TipoFrete tipoFrete = TipoFrete.values()[opcaoFrete - 1];
 
-            Frete frete = null;
-
-            if (tipoFrete.equals(TipoFrete.NORMAL)) {
-                frete = new Normal();
-            } else if (tipoFrete.equals(TipoFrete.SEDEX)) {
-                frete = new Sedex();
-            }
+            Frete frete = tipoFrete.obterFrete();
 
             double preco = frete.calcularPreco(distancia);
             System.out.printf("O valor total é de R$ %.2f", preco);
