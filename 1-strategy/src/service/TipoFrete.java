@@ -4,7 +4,9 @@ import service.frete.Normal;
 import service.frete.Sedex;
 
 /**
- * Enum que representa uma fábrica de tipos Frete
+ * Enum que representa uma fábrica de tipos Frete. Ao acionar o método
+ * obterFrete, a partir de alguma constante deste enum, a instância do tipo de
+ * frete correspondente é retornada.
  */
 public enum TipoFrete {
     NORMAL {
