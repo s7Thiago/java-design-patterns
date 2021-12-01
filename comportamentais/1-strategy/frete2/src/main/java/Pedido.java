@@ -3,7 +3,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Pedido {
+public abstract class Pedido {
     private Double valor;
 
     public double calculaFreteComum() {
