@@ -6,12 +6,7 @@ import lombok.Setter;
 public abstract class Pedido {
     private Double valor;
 
-    public double calculaFreteComum() {
-        return this.valor * 0.05;
-    }
+    public abstract Double calculaFreteComum();
 
-    public double calculaFreteExpresso() {
-        return this.valor * 0.1;
-
-    }
+    public abstract Double calculaFreteExpresso() throws Exception;
 }
