@@ -1,3 +1,5 @@
+package strategy.controleFrete;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,15 +10,5 @@ public class PedidoEletronicos extends Pedido {
 
     public PedidoEletronicos() {
         this.nomeSetor = "Eletrônicos";
-    }
-
-    @Override
-    public Double calculaFreteComum() {
-        return this.getValor() * 0.05;
-    }
-
-    @Override
-    public Double calculaFreteExpresso() {
-        return this.getValor() * 0.1;
     }
 }
