@@ -1,3 +1,5 @@
+import templatemethod.Gateway;
+
 public class App {
     public static void main(String[] args) {
         double valor = 1000.00;

@@ -1,16 +1,22 @@
 import lombok.AllArgsConstructor;
+import lombok.experimental.SuperBuilder;
+import templatemethod.Gateway;
+import templatemethod.Pagamento;
 
-@AllArgsConstructor
-public class PagamentoCredito {
-    private double valor;
-    private Gateway gateway;
+public class PagamentoCredito extends Pagamento {
+
+    public PagamentoCredito(double valor, Gateway gateway) {
+        super(valor, gateway);
+    }
 
     // Calcula a taxa do gateway
+    @Override
     public double calcularTaxa() {
         return this.valor * 0.05;
     }
 
 //    Calcula o desconto
+    @Override
     public double calcularDesconto() {
 
 //        Se o valor for maior que 300,00
@@ -22,12 +28,4 @@ public class PagamentoCredito {
         return 0.00;
     }
 
-//    Realiza a cobrança
-    public boolean realizaCobranca() {
-//        Calcula o valor total (valor do pagamento + taxa - desconto)
-        double valorTotal = this.valor + this.calcularTaxa() - this.calcularDesconto();
-
-//        Delega a cobrança para o gateway
-        return this.gateway.cobrar(valorTotal);
-    }
 }
