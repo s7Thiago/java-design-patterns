@@ -8,5 +8,5 @@ public interface Subject {
 
 //    Descadastra um observer da lista de interessados neste observer.Subject.
     void removeObserver(Observer o);
-    void notifyObserver(Observer o);
+    void notifyObservers();
 }

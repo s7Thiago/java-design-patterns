@@ -6,18 +6,18 @@ import observer.Subject;
 
 @Getter
 @Setter
-public class Cliente implements Observer {
+public class Funcionario implements Observer {
     private String nome;
     private String email;
     private Subject subject;
 
-//     Para instanciar um cliente, todos os atributos serã exigidos
-    public Cliente(String nome, String email, Subject subject) {
+//         Para instanciar um cliente, todos os atributos serã exigidos
+    public Funcionario(String nome, String email, Subject subject) {
         this.nome = nome;
         this.email = email;
         this.subject = subject;
 
-//        Registrando o cliente no subject
+//        Registrando o funcionario no subject
         this.subject.registerObserver(this);
     }
 
