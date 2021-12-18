@@ -3,7 +3,7 @@ package observer;
 import java.util.List;
 
 public class Newsletter implements Subject{
-//    Lista de observers interessados nas alterações de estado neste objeto
+    // Lista de observers interessados nas alterações de estado neste objeto
     private List<Observer> observers;
     private List<String> mensagens;
 
@@ -24,7 +24,7 @@ public class Newsletter implements Subject{
         }
     }
 
-//    Método que faz parte do contexto da aplicação (não do padrão Observer)
+    // Método que faz parte do contexto da aplicação (não do padrão Observer)
     public void addMensagem(String mensagem) {
         this.mensagens.add(mensagem);
         notifyObservers();

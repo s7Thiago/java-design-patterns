@@ -11,13 +11,13 @@ public class Funcionario implements Observer {
     private String email;
     private Subject subject;
 
-//         Para instanciar um cliente, todos os atributos serã exigidos
+    // Para instanciar um cliente, todos os atributos serã exigidos
     public Funcionario(String nome, String email, Subject subject) {
         this.nome = nome;
         this.email = email;
         this.subject = subject;
 
-//        Registrando o funcionario no subject
+        // Registrando o funcionario no subject
         this.subject.registerObserver(this);
     }
 

@@ -15,22 +15,5 @@ public class Main {
 
         pe.setTipoFrete(freteComum);
         System.out.println("Frete Comum: R$ " + pe.calcularFrete());
-
-//        System.out.println("Frete Comum: R$ " + pe.calculaFreteComum());
-//        try {
-//            System.out.println("Frete Expresso: R$ " + pe.calculaFreteExpresso());
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//        controleFrete.Pedido pm = new controleFrete.PedidoMoveis();
-//        pm.setValor(100.0);
-//
-//        System.out.println("\nFrete Comum: R$ " + pm.calculaFreteComum());
-//        try {
-//            System.out.println("Frete Expresso: R$ " + pm.calculaFreteExpresso());
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
     }
 }

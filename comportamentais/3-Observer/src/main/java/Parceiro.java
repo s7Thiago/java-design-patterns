@@ -11,13 +11,13 @@ public class Parceiro implements Observer {
     private String email;
     private Subject subject;
 
-//         Para instanciar um cliente, todos os atributos serã exigidos
+    // Para instanciar um cliente, todos os atributos serã exigidos
     public Parceiro(String nome, String email, Subject subject) {
         this.nome = nome;
         this.email = email;
         this.subject = subject;
 
-//        Registrando o parceiro no subject
+        // Registrando o parceiro no subject
         this.subject.registerObserver(this);
     }
 
