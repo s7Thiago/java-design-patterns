@@ -16,5 +16,13 @@ public class App {
 
         newsletter.addMensagem("Primeira mensagem");
 
+        // Desinscrevendo observadores da newsletter
+        newsletter.removeObserver(f1);
+        newsletter.removeObserver(c1);
+        newsletter.removeObserver(pq);
+
+        System.out.println("\n=========================================================\n");
+
+        newsletter.addMensagem("Segunda mensagem");
     }
 }
