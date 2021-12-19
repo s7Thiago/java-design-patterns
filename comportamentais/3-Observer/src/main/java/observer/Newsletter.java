@@ -7,6 +7,11 @@ public class Newsletter implements Subject{
     private List<Observer> observers;
     private List<String> mensagens;
 
+    public Newsletter() {
+        this.observers = new java.util.ArrayList<>();
+        this.mensagens = new java.util.ArrayList<>();
+    }
+
     @Override
     public void registerObserver(Observer o) {
         this.observers.add(o);
