@@ -1,4 +1,4 @@
-public class App {
+public class AppPedido {
     public static void main(String[] args) {
         // Criando um pedido
         Pedido p = new Pedido();
